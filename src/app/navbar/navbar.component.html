@@ -1,0 +1,81 @@
+<div id="navbar-header">
+  <!-- ****************** Start NavBar ****************** -->
+  <nav id="navbars" class="navbar navbar-expand-lg">
+    <div class="container">
+      <a href="#" class="navbar-brand">Sa.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-uppercase" id="navbarSupportContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="#services" class="nav-link">Services <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#About" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Works" class="nav-link">Works</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Resume" class="nav-link">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Contacts" class="nav-link">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- ****************** End NavBar ****************** -->
+  <!-- ****************** Start Header ****************** -->
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="image-header text-center">
+            <img src="assets/images/1.jpg" class="img-fluid" alt="#myimage">
+            <div class="icon-head">
+              <a href="#"><i class="fab fa-linkedin-in icon-style"></i></a>
+              <a href="#"><i class="fab fa-github icon-style"></i></a>
+              <a href="#"><i class="fab fa-facebook icon-style"></i></a>
+              <a href="#"><i class="fab fa-twitter icon-style"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="text-header">
+            <h1>Hello, <br>i'm <span class="color-name">Somendra</span> <br>font/Back-Dev</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ****************** End Header ****************** -->
+</div>
+<script type="text/javascript">
+  $(document).ready(function () {
+
+    var prev_scroll = window.pageYOffset;
+    if (prev_scroll <= 0) {
+      $("#navbars").hide(); //hide the scroll at the time of page load
+    }
+    window.onscroll = function () {
+      console.log("prev_s ", prev_scroll);
+      var current_scroll = window.pageYOffset;
+      console.log("curr_s ", current_scroll);
+      if (current_scroll != prev_scroll) {
+        $('#navbars').show();
+      }
+      if (current_scroll < 1) {
+        $('#navbars').hide();
+      }
+      prev_scroll = current_scroll;
+    }
+  });
+
+</script>
